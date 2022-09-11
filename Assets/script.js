@@ -66,6 +66,20 @@ if (currentHour > 17){
 
 }, 1000);
 
-// var saveButton = document.getElementById("save");
-// saveButton.addEventListener("click", function(event) {
-//     event.preventDefault();
+
+var saveBtn = document.querySelector("#save");
+
+saveBtn.addEventListener("click", function(event){
+    var btnClicked = event.target
+    var row = btnClicked.closest(".row");
+    var taskText = row.querySelector(".task").innerText.trim();
+    var keyHour = row.querySelector(".hour").innerText;
+    localStorage.setItem(keyHour, taskText);
+ })
+
+ if (localStorage.getItem("9AM").length) {
+    var taskText = localStorage.getItem("9AM");
+    var task = document.getElementById("task9");
+    task.innerText = taskText;
+ }
+

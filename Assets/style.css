@@ -39,7 +39,7 @@ textarea {
 .hour {
   background-color: #ffffff;
   color: #000000;
-  border-top: 1px dashed #000000;
+  
 }
 
 .past {
@@ -68,4 +68,11 @@ textarea {
 .saveBtn i:hover {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
+}
+
+.task{
+  max-height: 20rem; 
+  overflow: hidden;
+  background-color: rgb(184, 180, 180);
+  color: white;
 }
